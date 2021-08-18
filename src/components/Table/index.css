@@ -2,14 +2,14 @@
     height: 20px;
     width: 90%;
     border-radius: 10px;
-    background-color: rgba(250, 235, 215, 0.719);
+    background-image: linear-gradient(to right, rgb(81, 134, 105),rgb(118, 221, 157),rgb(81, 134, 105), rgb(99, 212, 114),rgb(81, 134, 105),rgb(118, 221, 157),rgb(81, 134, 105));
     display: flex;
     justify-content: space-evenly;
     overflow: hidden;
     border: 1px solid rgba(214, 147, 147, 0.527);
 }
 .table-stripe{
-    width: 5px;
+    width: .35%;
     background-color: rgba(81, 199, 199, 0.575);
     transform: rotate(70deg);
     height: 70px;

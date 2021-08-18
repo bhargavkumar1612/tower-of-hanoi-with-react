@@ -1,8 +1,7 @@
 .status-bar{
     display: flex;
     width: 90%;
-    background-color: #e03451be;
-    
+    background-image: linear-gradient(to right, rgba(235, 192, 192, 0.753), rgba(238, 225, 225, 0.801));
     justify-content: space-around;
     align-items: center;
     height: 7%;
@@ -10,13 +9,37 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+.select-n{
+    width: 10%;
+    height: 35px;
+    border: 0;
+    border-radius: 17px;
+    padding: 10px;
+    background-color: rgb(138, 255, 127);
+    color: blueviolet;
+    font-size: 15px;
+    font-weight: bold;
+}
+.select-n:focus{
+    box-shadow: 0 0 3px 2px rgb(198, 212, 135);
+    outline: 0px;
+}
+.select-n:hover{
+    box-shadow: 0 0 3px 2px rgb(198, 212, 135);
+    outline: 0px;
+}
+
 .moves{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
+    font-weight: bold;
+    color: rgb(112, 103, 85);
 }
 .moves-span{
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
+    color: rgb(91, 46, 100);
+    margin: 5px;
 }
 .move-total{
     font-family:'Courier New', Courier, monospace;
@@ -27,16 +50,26 @@
     width: 100px;
     border-radius: 10px;
     border: 0;
-    background-color: rgba(0, 68, 255, 0.637);
-    font-family:'Helvetica'
+    font-family:'Helvetica';
+    background-color: blueviolet;
+    color: rgb(21, 226, 131);
+    font-size: 16px;
+}
+.reset-btn:hover{
+    box-shadow: 0 0 3px 2px rgb(198, 212, 135);
 }
 .solve-btn{
     height: 60%;
     width: 100px;
     border-radius: 10px;
     border: 0;
-    background-color: rgba(0, 68, 255, 0.637);
-    font-family:'Helvetica'
+    font-family:'Helvetica';
+    background-color: rgb(211, 121, 19);
+    color: rgb(218, 208, 200);
+    font-size: 16px;
+}
+.solve-btn:hover{
+    box-shadow: 0 0 3px 2px rgb(86, 182, 211);
 }
 .err-msg{
     font-size: 15px;

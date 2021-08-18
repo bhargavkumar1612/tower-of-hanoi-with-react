@@ -1,7 +1,9 @@
 import {Component} from "react"
 import "./index.css"
 
-const colors = ["yellow","blue","red","yellowgreen","violet","blueviolet","rgb(39, 151, 105)","rgb(96, 71, 119)","rgb(202, 75, 86)"]
+const colors = ["rgba(81, 151, 231, 0.9)","rgba(231, 149, 81, 0.9)","rgba(231, 204, 81, 0.9)",
+                "rgba(129, 231, 81, 0.9)","rgba(81, 231, 174, 0.9)","rgba(81, 184, 231, 0.9)",
+                "rgb(39, 151, 105, 0.9)","rgb(96, 71, 119, 0.9)","rgb(202, 75, 86, 0.9)"]
 class GamePiece extends Component {
     render(){
         const {onDragStartFunction,onDragEndFunction,length} = this.props

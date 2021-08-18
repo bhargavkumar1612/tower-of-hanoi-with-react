@@ -72,7 +72,7 @@ class Toh extends Component {
             if(i===sol.length){
                 clearInterval(this.I)
             }
-        }, 500);
+        }, 800);
     }
 
     onDragStartFunction = (event)=>{
