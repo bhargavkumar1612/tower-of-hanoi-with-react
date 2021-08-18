@@ -51,22 +51,22 @@ class Toh extends Component {
             [f,l]=sol[i]
             if(f===0 && l===1){
                 const {r0,r1,moves}=this.state
-                this.setState({r0:r0.slice(1),r1:[r0[0],...r1] ,moves:moves+1})
+                this.setState({r0:r0.slice(0,-1),r1:[...r1,r0[r0.length-1]] ,moves:moves+1})
             }else if(f===1 && l===0){
                 const {r0,r1,moves}=this.state
-                this.setState({r1:r1.slice(1),r0:[r1[0],...r0] ,moves:moves+1})
+                this.setState({r1:r1.slice(0,-1),r0:[...r0,r1[r1.length-1]] ,moves:moves+1})
             }else if(f===0 && l===2){
                 const {r0,r2,moves}=this.state
-                this.setState({r0:r0.slice(1),r2:[r0[0],...r2] ,moves:moves+1})
+                this.setState({r0:r0.slice(0,-1),r2:[...r2,r0[r0.length-1]] ,moves:moves+1})
             }else if(f===2 && l===0){
                 const {r2,r0,moves}=this.state
-                this.setState({r2:r2.slice(1),r0:[r2[0],...r0] ,moves:moves+1})
+                this.setState({r2:r2.slice(0,-1),r0:[...r0,r2[r2.length-1]] ,moves:moves+1})
             }else if(f===2 && l===1){
                 const {r2,r1,moves}=this.state
-                this.setState({r2:r2.slice(1),r1:[r2[0],...r1] ,moves:moves+1})
+                this.setState({r2:r2.slice(0,-1),r1:[...r1,r2[r2.length-1]] ,moves:moves+1})
             }else if(f===1 && l===2){
                 const {r1,r2,moves}=this.state
-                this.setState({r1:r1.slice(1),r2:[r1[0],...r2] ,moves:moves+1})
+                this.setState({r1:r1.slice(0,-1),r2:[...r2,r1[r1.length-1]] ,moves:moves+1})
             }
             i+=1
             if(i===sol.length){
