@@ -1,0 +1,7 @@
+.game-piece{
+    height: 4%;
+    border-radius: 10px;
+    z-index: inherit;
+    border: 1px solid black;
+    cursor: move;
+}

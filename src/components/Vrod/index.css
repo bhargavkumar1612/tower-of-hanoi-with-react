@@ -1,0 +1,32 @@
+.game-div{
+    width: 33.333333333%;
+    height: 100%;
+}
+.vrod{
+    position: relative;
+    width: 3%;
+    height: 80%;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: rgba(209, 112, 47, 0.788);
+    left: 48.5%;
+    top: 20%;
+    margin-right: 0;
+}
+.pieces-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: transparent;
+    position: relative;
+    top: -80.5%;
+}
+.game-div .vrod{
+    z-index: -1;
+}
+.game-div .pieces-div{
+    z-index: 1;
+}
