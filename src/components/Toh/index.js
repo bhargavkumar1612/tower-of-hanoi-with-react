@@ -178,7 +178,7 @@ class Toh extends Component {
                     <h1 className="game-title">Tower of Hanoi</h1>
                     <StatusBar onSelectN={this.onSelectN} n={n} moves={moves} errMsg={errMsg} onReset={this.reset} onSolve={this.solve}/>
                     <div className="game-area">
-                        <Vrod id='1' pieces={r0} onDragStartFunction={this.onDragStartFunction} onDragEndFunction={this.onDragEndFunction}/>
+                        <Vrod id='1' pieces={r0.reverse()} onDragStartFunction={this.onDragStartFunction} onDragEndFunction={this.onDragEndFunction}/>
                         <Vrod id='2' pieces={r1} onDragStartFunction={this.onDragStartFunction} onDragEndFunction={this.onDragEndFunction}/>
                         <Vrod id='3' pieces={r2} onDragStartFunction={this.onDragStartFunction} onDragEndFunction={this.onDragEndFunction}/>
                     </div>
