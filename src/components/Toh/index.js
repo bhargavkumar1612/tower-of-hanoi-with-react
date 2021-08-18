@@ -95,11 +95,13 @@ class Toh extends Component {
         else if(event.type==="dragend"){
             end = this.getNearestElement(event.clientX)
         }
-        let startList = this.state[`r${start}`]
-        let endList = this.state[`r${end}`]
+        let startList
+        let endList
         let {moves} = this.state
         moves+=1
         if(start===0 && end===1){
+            startList = this.state.r0
+            endList = this.state.r1
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
@@ -107,6 +109,8 @@ class Toh extends Component {
             }
         }
         else if(start===1 && end===0){
+            startList = this.state.r1
+            endList = this.state.r0
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
@@ -114,6 +118,8 @@ class Toh extends Component {
             }
         }
         else if(start===0 && end===2){
+            startList = this.state.r0
+            endList = this.state.r2
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
@@ -121,6 +127,8 @@ class Toh extends Component {
             }
         }
         else if(start===2 && end===0){
+            startList = this.state.r2
+            endList = this.state.r0
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
@@ -128,6 +136,8 @@ class Toh extends Component {
             }
         }
         else if(start===1 && end===2){
+            startList = this.state.r1
+            endList = this.state.r2
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
@@ -135,6 +145,8 @@ class Toh extends Component {
             }
         }
         else if(start===2 && end===1){
+            startList = this.state.r2
+            endList = this.state.r1
             if(startList[0]>endList[0]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
