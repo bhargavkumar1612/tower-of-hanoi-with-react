@@ -1,7 +1,0 @@
-@media screen and (max-width:728px){
-    body{
-        transform: rotate(90deg);
-        height: 100vw;
-        width: 100vh;
-    }
-}
