@@ -26,18 +26,18 @@ function hanoiSol(n){
 }
 
 class Toh extends Component {
-    state = {r0: range(8), r1:range(0),r2:range(0),start:null,n:8,moves:0,errMsg:""}
+    state = {r0: range(8).reverse(), r1:range(0),r2:range(0),start:null,n:8,moves:0,errMsg:""}
 
     I
 
     onSelectN=(e)=>{
-      this.setState({r0:range(e.target.value),r1:range(0),r2:range(0),n:e.target.value,moves:0,errMsg:""})
+      this.setState({r0:range(e.target.value).reverse(),r1:range(0),r2:range(0),n:e.target.value,moves:0,errMsg:""})
     }
 
     reset = ()=>{
         const {n} = this.state
         clearInterval(this.I)
-        this.setState({r0: range(n), r1:range(0),r2:range(0),start:null,moves:0,errMsg:""})
+        this.setState({r0: range(n).reverse(), r1:range(0),r2:range(0),start:null,moves:0,errMsg:""})
     }
 
     solve = ()=>{
