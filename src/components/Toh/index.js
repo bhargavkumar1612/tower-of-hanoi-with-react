@@ -102,55 +102,67 @@ class Toh extends Component {
         if(start===0 && end===1){
             startList = this.state.r0
             endList = this.state.r1
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r0:startList.slice(1),r1:[startList[0], ...endList],moves:moves,errMsg:""})
+                this.setState({r0:startList.slice(0,-1),
+                               r1:[...endList,startList[startList.length-1]],
+                               moves:moves,errMsg:""})
             }
         }
         else if(start===1 && end===0){
             startList = this.state.r1
             endList = this.state.r0
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r1:startList.slice(1),r0:[startList[0], ...endList],moves:moves,errMsg:""})                
+                this.setState({r1:startList.slice(0,-1),
+                               r0:[...endList,startList[startList.length-1]],
+                               moves:moves,errMsg:""})                
             }
         }
         else if(start===0 && end===2){
             startList = this.state.r0
             endList = this.state.r2
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r0:startList.slice(1),r2:[startList[0], ...endList],moves:moves,errMsg:""})                
+                this.setState({r0:startList.slice(0,-1),
+                               r2:[...endList,startList[startList.length-1]],
+                               moves:moves,errMsg:""})                
             }
         }
         else if(start===2 && end===0){
             startList = this.state.r2
             endList = this.state.r0
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r2:startList.slice(1),r0:[startList[0], ...endList],moves:moves,errMsg:""})                
+                this.setState({r2:startList.slice(0,-1),
+                               r0:[...endList,startList[startList.length-1]],
+                               moves:moves,errMsg:""})                
             }
         }
         else if(start===1 && end===2){
             startList = this.state.r1
             endList = this.state.r2
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r1:startList.slice(1),r2:[startList[0], ...endList],moves:moves,errMsg:""})                
+                this.setState({r1:startList.slice(0,-1),
+                               r2:[...endList,startList[startList.length-1]],
+                               moves:moves,errMsg:""})                
             }
         }
         else if(start===2 && end===1){
             startList = this.state.r2
             endList = this.state.r1
-            if(startList[0]>endList[0]){
+            if(startList[startList.length-1]>endList[endList.length-1]){
                 this.setState({errMsg:"Not Allowed"})
             }else{
-                this.setState({r2:startList.slice(1),r1:[startList[0], ...endList],moves:moves})                
+                this.setState({r2:startList.slice(0,-1),
+                               r1:[...endList,startList[startList.length-1]],
+                               moves:moves})                
             }
         }
     }
